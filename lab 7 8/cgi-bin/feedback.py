@@ -3,11 +3,14 @@ import sys
 import codecs
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+file = open("feedback.txt", "w")
 
 
 form = cgi.FieldStorage()
-n1 = form.getfirst("name_1", "аноним")
-n2 = form.getfirst("name_2", "")
+feedback = form.getfirst("feedback", "не задано")
+person = form.getfirst("person", "никому")
+file.write(feedback)
+file.close()
 #yl=[]
 #yl = form.getlist("you_like")
 
@@ -26,8 +29,7 @@ print("""<!DOCTYPE HTML>
     </header>
     <main id="content" class="main-content">
 	""") 
-n=n1+" "+n2
-print(f"""Здравствуйте, {n1}""")
+print(f"""Благодарим вас за отзыв, ваше письмо будет направлено  {person}""")
 print("""</main>
    <aside class="sidebar">
     

@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/register.css">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация</title>
 </head>
 <body>
-    
+    <div class="container">
+        <form action="/cgi-bin/reg_form.py">
+        Имя
+        <input name="name">
+        Фамилия
+        <input name="lastname">
+        Логин
+        <input name="login">
+        Пароль
+        <div class="pass">
+        <input class="password" name="password">
+        </div>
+        <button class="btn_register">Зарегистрироваться</button>
+    </form>
+    </div>
+    <script src="js/register.js"></script>
 </body>
 </html>

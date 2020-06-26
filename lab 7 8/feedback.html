@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/feedback.css">
+    <title>Оставить отзыв</title>
+</head>
+<body>
+    <div class="container">
+        <H2>Понравилось у нас или хотите указать на недостатки?</H2>
+        <h2>Напишите нам, мы рады все отзывам</h2>
+        <textarea name="feedback" id="" cols="30" rows="5"></textarea>
+        <H2>Кому из наших сотрудников вы хотите отправить письмо?</H2>
+        <form action="cgi-bin/feedback.py">
+            <input id="director" name="person" value="director" type="radio">
+            <label for="director">Директор</label>
+            <input id="security" name="person" value="security" type="radio">
+            <label for="security">Охранник</label>
+            <input id="admin" name="person" value="admin" type="radio">
+            <label for="admin">Администратор</label>
+            <br>
+            <Input type="submit"></Input>
+        </form>
+    </div>
+</body>
+</html>

@@ -6,8 +6,10 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 
 form = cgi.FieldStorage()
-n1 = form.getfirst("name_1", "аноним")
-n2 = form.getfirst("name_2", "")
+name = form.getfirst("name", "не задано")
+lastname = form.getfirst("lastname", "")
+login = form.getfirst("login", "")
+password = form.getfirst("password","")
 #yl=[]
 #yl = form.getlist("you_like")
 
@@ -26,8 +28,7 @@ print("""<!DOCTYPE HTML>
     </header>
     <main id="content" class="main-content">
 	""") 
-n=n1+" "+n2
-print(f"""Здравствуйте, {n1}""")
+print(f"""<p>Поздравляем {lastname} {name}, вы успешно прошли регистрацию под логином {login}</p>""")
 print("""</main>
    <aside class="sidebar">
     

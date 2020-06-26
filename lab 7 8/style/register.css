@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    border-collapse: collapse;
+    font-size: 14pt;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    width: 20%;
+    position: absolute;
+    top:10%;
+    left:40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+}
+.btn_register {
+    margin: auto;
+}
+p {
+    text-align: center;
+    color: red;
+}
